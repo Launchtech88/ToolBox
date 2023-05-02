@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QTableWidgetItem
-from MainWindows import Ui_MainWindow
+from toolbox import Ui_MainWindow
 import pandas as pd
 
 
@@ -55,6 +55,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainwindow = MyMainWindow()
+    mainwindow.setWindowTitle('ToolBox')
     mainwindow.showMaximized()
     sys.exit(app.exec())
 
