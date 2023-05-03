@@ -179,7 +179,8 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     mainwindow = MyMainWindow()
     mainwindow.setWindowTitle('ToolBox')
-    mainwindow.showMaximized()
+    mainwindow.setMinimumSize(960, 800)
+    mainwindow.show()
     sys.exit(app.exec())
 
 
