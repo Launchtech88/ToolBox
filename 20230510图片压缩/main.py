@@ -25,7 +25,7 @@ def excepthook(exc_type, exc_value, exc_tb):
 # include image
 def resource_path(relative_path):
     if hasattr(sys, '_MEIPASS'):
-        return os.path.join(sys._MEIPASS, relative_path)
+        return os.path.join(sys._MEIPASS, os.path.basename(relative_path))
     return os.path.join(os.path.abspath("."), relative_path)
 
 
@@ -65,7 +65,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow):
         image_size = ['原始比例', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%']
         self.image_list = []
         # add image to label
-        self.label.setPixmap(QPixmap(resource_path('wechat.jpg')))
+        self.label.setPixmap(QPixmap(resource_path('static/wechat.jpg')))
         # 上传
         self.pushButton_2.clicked.connect(self.upload_images)
         # tab1

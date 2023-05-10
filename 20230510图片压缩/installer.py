@@ -5,7 +5,7 @@ PyInstaller.__main__.run([
     'main.py',
     '--onefile',
     '--windowed',
-    '--icon=logo.ico',
-    '--add-data=wechat.jpg;.',
+    '--icon=static/logo.ico',
+    '--add-data=static/wechat.jpg;.',
     '--name=图片压缩工具'
 ])
